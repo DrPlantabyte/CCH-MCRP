@@ -1,3 +1,8 @@
+
+language.name=English
+language.region=United States
+language.code=en_us
+
 achievement.acquireIron.desc=Smelt an iron ingot
 achievement.acquireIron=Acquire Hardware
 achievement.bakeCake.desc=Wheat, sugar, milk and eggs!
