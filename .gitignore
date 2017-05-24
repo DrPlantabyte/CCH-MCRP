@@ -1,2 +1,7 @@
-
+# note: git is VERY PARTICULAR about file encoding and line endings
+# and if you make a mistake, changing the .gitignore file is not 
+# enough to make git forget your mistake. You need to run:
+# git rm . -r --cached ; git add .
+# but that will also delete all uncommited work,
+# so you must dance for Linus Torvalds! Dance! Dance he says!
 distributables/**
