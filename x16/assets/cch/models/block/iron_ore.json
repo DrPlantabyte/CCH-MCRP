@@ -1,0 +1,7 @@
+{
+    "parent": "cch:block/ore1",
+    "textures": {
+        "base": "cch:materials/stone",
+		"ore": "cch:materials/rust"
+    }
+}
