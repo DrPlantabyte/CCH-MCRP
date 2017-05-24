@@ -10,6 +10,8 @@ source_dirnames = ["x16"]
 project_dirs=[]
 
 def main():
+	if not(os.path.exists("distributables")):
+		os.makedirs("distributables")
 	for src in source_dirnames:
 		src_dir = str(this_dir) + os.sep + src
 		zip_file = "distributables" + os.sep + "CCH-Minecraft_" + src + ".zip"
