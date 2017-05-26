@@ -17,6 +17,17 @@ def main():
 		zip_file = "distributables" + os.sep + "CCH-Minecraft_" + src + ".zip"
 		the_files = listFiles(src_dir)
 		zipFiles(src_dir, the_files, zip_file, zipfile.ZIP_STORED)
+		hasher = hashlib.sha1()
+		with open(zip_file, 'rb') as f:
+			while True:
+				data = f.read(4096)
+				if not data:
+					break
+				hasher.update(data)
+		sha1_hash = hasher.hexdigest()
+		fout = open(zip_file+"_sha1.txt","w")
+		fout.write(sha1_hash)
+		fout.close()
 	world_dir = str(this_dir) + os.sep + "world"
 	world_zip = "distributables" + os.sep + "world.zip"
 	zipFiles(world_dir, listFiles(world_dir), world_zip, zipfile.ZIP_DEFLATED)
