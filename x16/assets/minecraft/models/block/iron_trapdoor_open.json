@@ -1,0 +1,7 @@
+{
+    "parent": "cch:block/trapdoor_open",
+    "textures": {
+        "outside": "blocks/stone",
+		"inside":  "cch:materials/iron_blind"
+    }
+}

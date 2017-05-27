@@ -1,0 +1,7 @@
+{
+    "parent": "cch:block/trapdoor_open",
+    "textures": {
+        "outside": "blocks/planks_oak",
+		"inside":  "cch:materials/wooden_blind"
+    }
+}
