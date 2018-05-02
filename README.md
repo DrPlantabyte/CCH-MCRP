@@ -3,7 +3,7 @@
 This is my on-going Minecraft resource pack. My aim is to improve the consistency of the game. For example, I rename "Oak Tree" to "Fruit Tree" so that it is more logical for the branches to produce apples when destroyed.
 
 ## Minecraft Versions Supported
-Minecraft 1.11 - 1.13
+Minecraft 1.10 - 1.13
 
 ## Permissions & Redistribution
 Anyone is free to use this resource pack in their own Minecraft game.
