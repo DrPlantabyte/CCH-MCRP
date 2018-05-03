@@ -8,31 +8,27 @@ import zipfile
 
 this_dir = os.path.dirname(os.path.realpath(__file__))
 
-source_dirnames = ["x16"]
-project_dirs=[]
+texture_dirs = ["x16"]
+datapack_dir = os.path.join(this_dir, "datapack")
+dist_dir = os.path.join(this_dir, "distributables")
+
 
 def main():
-	if not(os.path.exists(str(this_dir) + os.sep + "distributables")):
-		os.makedirs(str(this_dir) + os.sep + "distributables")
-	for src in source_dirnames:
-		src_dir = str(this_dir) + os.sep + src
-		zip_file = str(this_dir) + os.sep + "distributables" + os.sep + "CCH-Minecraft_" + src + ".zip"
-		the_files = listFiles(src_dir)
-		zipFiles(src_dir, the_files, zip_file, zipfile.ZIP_STORED)
-		hasher = hashlib.sha1()
-		with open(zip_file, 'rb') as f:
-			while True:
-				data = f.read(4096)
-				if not data:
-					break
-				hasher.update(data)
-		sha1_hash = hasher.hexdigest()
-		fout = open(zip_file+"_sha1.txt","w")
-		fout.write(sha1_hash)
-		fout.close()
-	world_dir = str(this_dir) + os.sep + "world"
-	world_zip = str(this_dir) + os.sep + "distributables" + os.sep + "world.zip"
-	zipFiles(world_dir, listFiles(world_dir), world_zip, zipfile.ZIP_DEFLATED)
+	if not(os.path.exists(dist_dir)):
+		os.makedirs(dist_dir)
+	for tex_src in texture_dirs:
+		src_dir = os.path.join(this_dir, tex_src)
+		zip_file = os.path.join(dist_dir, "CCH_resourcepack_" + str(tex_src) + ".zip")
+		zipDir(src_dir, zip_file)
+	zipDir(datapack_dir, os.path.join(dist_dir, "CCH_datapack.zip"))
+
+def zipDir(src_dir, dest_filepath):
+	the_files = listFiles(src_dir)
+	zipFiles(src_dir, the_files, dest_filepath, zipfile.ZIP_STORED)
+	sha1_hash = hashFile(dest_filepath)
+	fout = open(dest_filepath+"_sha1.txt","w")
+	fout.write(sha1_hash)
+	fout.close()
 
 def zipFiles(source_root, file_list, dest_file, compression):
 	# note: Minecraft is bad at handling compressed zip files
@@ -44,6 +40,16 @@ def zipFiles(source_root, file_list, dest_file, compression):
 			zout.write(input_file, arcname=zipped_file)
 	finally:
 		zout.close()
+def hashFile(filepath):
+	hasher = hashlib.sha1()
+	with open(filepath, 'rb') as f:
+		while True:
+			data = f.read(4096)
+			if not data:
+				break
+			hasher.update(data)
+	sha1_hash = hasher.hexdigest()
+	return sha1_hash
 
 def listFiles(root_dir):
 	fl = []

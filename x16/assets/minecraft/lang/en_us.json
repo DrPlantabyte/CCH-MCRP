@@ -1,7 +1,8 @@
 {
+	"block.minecraft.end_rod": "Glow Rod",
 	"block.minecraft.oak_planks": "Wooden Planks",
 	"block.minecraft.dark_oak_planks": "Oak Planks",
-	"block.minecraft.oak_sapling": "Apple Sapling",
+	"block.minecraft.oak_sapling": "Fruit Tree Sapling",
 	"block.minecraft.dark_oak_sapling": "Oak Sapling",
 	"block.minecraft.oak_door": "Wooden Door",
 	"block.minecraft.dark_oak_door": "Oak Door",
