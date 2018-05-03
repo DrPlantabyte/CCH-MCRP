@@ -1,7 +1,7 @@
 {
     "parent": "cch:block/trapdoor_bottom",
     "textures": {
-        "outside": "blocks/stone",
-		"inside":  "cch:materials/iron_blind"
+        "texture": "blocks/stone",
+        "blind":  "cch:materials/iron_blind"
     }
 }

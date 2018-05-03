@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import shutil
 import sys
 import os
@@ -10,11 +12,11 @@ source_dirnames = ["x16"]
 project_dirs=[]
 
 def main():
-	if not(os.path.exists("distributables")):
-		os.makedirs("distributables")
+	if not(os.path.exists(str(this_dir) + os.sep + "distributables")):
+		os.makedirs(str(this_dir) + os.sep + "distributables")
 	for src in source_dirnames:
 		src_dir = str(this_dir) + os.sep + src
-		zip_file = "distributables" + os.sep + "CCH-Minecraft_" + src + ".zip"
+		zip_file = str(this_dir) + os.sep + "distributables" + os.sep + "CCH-Minecraft_" + src + ".zip"
 		the_files = listFiles(src_dir)
 		zipFiles(src_dir, the_files, zip_file, zipfile.ZIP_STORED)
 		hasher = hashlib.sha1()
@@ -29,7 +31,7 @@ def main():
 		fout.write(sha1_hash)
 		fout.close()
 	world_dir = str(this_dir) + os.sep + "world"
-	world_zip = "distributables" + os.sep + "world.zip"
+	world_zip = str(this_dir) + os.sep + "distributables" + os.sep + "world.zip"
 	zipFiles(world_dir, listFiles(world_dir), world_zip, zipfile.ZIP_DEFLATED)
 
 def zipFiles(source_root, file_list, dest_file, compression):
