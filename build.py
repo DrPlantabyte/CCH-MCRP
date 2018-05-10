@@ -1,28 +1,36 @@
 #!/usr/bin/python3
 
-import shutil
+import shutilimport distutilsfrom distutils.dir_util import copy_tree
 import sys
 import os
 import hashlib
 import zipfile
 
 this_dir = os.path.dirname(os.path.realpath(__file__))
-
+common_dir = os.path.join(this_dir, "common")
 texture_dirs = ["x16"]
 datapack_dir = os.path.join(this_dir, "datapack")
-dist_dir = os.path.join(this_dir, "distributables")
+dist_dir = os.path.join(this_dir, "distributables")build_dir = os.path.join(this_dir, "temp")
 
 
-def main():
+def main():	# setup dirs
 	if not(os.path.exists(dist_dir)):
 		os.makedirs(dist_dir)
+	if not(os.path.exists(build_dir)):
+		os.makedirs(build_dir)
 	for tex_src in texture_dirs:
-		src_dir = os.path.join(this_dir, tex_src)
+		print(str.format("\n\tBuilding texture pack '{}'...", tex_src))		# setup build dirs		tmp_build_dir = os.path.join(build_dir, tex_src)
+		if not(os.path.exists(tmp_build_dir)):
+			os.makedirs(tmp_build_dir)
+		src_dir = os.path.join(this_dir, tex_src)		# copy sources
+		copy_tree(common_dir, tmp_build_dir)
+		copy_tree(src_dir, tmp_build_dir)		# distribute as .zip file
 		zip_file = os.path.join(dist_dir, "CCH_resourcepack_" + str(tex_src) + ".zip")
-		zipDir(src_dir, zip_file)
-	zipDir(datapack_dir, os.path.join(dist_dir, "CCH_datapack.zip"))
+		zipDir(tmp_build_dir, zip_file)	# distribute the datapack
+	print(str.format("\n\tBuilding datapack..."))
+	zipDir(datapack_dir, os.path.join(dist_dir, "CCH_datapack.zip"))	# clean-up	shutil.rmtree(build_dir)
 
-def zipDir(src_dir, dest_filepath):
+def zipDir(src_dir, dest_filepath):	print(str.format("Zipping '{}' to '{}'", src_dir, dest_filepath))
 	the_files = listFiles(src_dir)
 	zipFiles(src_dir, the_files, dest_filepath, zipfile.ZIP_STORED)
 	sha1_hash = hashFile(dest_filepath)
@@ -41,6 +49,7 @@ def zipFiles(source_root, file_list, dest_file, compression):
 	finally:
 		zout.close()
 def hashFile(filepath):
+	print(str.format("Hashing file '{}' with SHA1", filepath))
 	hasher = hashlib.sha1()
 	with open(filepath, 'rb') as f:
 		while True:
@@ -49,6 +58,7 @@ def hashFile(filepath):
 				break
 			hasher.update(data)
 	sha1_hash = hasher.hexdigest()
+	print(str.format("\t'{}'", sha1_hash))
 	return sha1_hash
 
 def listFiles(root_dir):

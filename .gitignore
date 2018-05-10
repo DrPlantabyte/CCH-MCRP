@@ -5,3 +5,4 @@
 # but that will also delete all uncommited work,
 # so you must dance for Linus Torvalds! Dance! Dance he says!
 distributables/**
+temp/**
