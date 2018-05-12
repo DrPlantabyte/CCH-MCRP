@@ -1,7 +1,7 @@
 {
   "type": "smelting",
   "ingredient": {
-    "tag": "minecraft:charcoal"
+    "item": "minecraft:charcoal"
   },
   "result": "minecraft:ink_sac",
   "experience": 0.15,
