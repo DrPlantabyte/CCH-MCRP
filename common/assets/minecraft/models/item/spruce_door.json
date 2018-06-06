@@ -1,7 +1,7 @@
 {
     "parent": "cch:item/door_item",
     "textures": {
-        "bottom": "blocks/spruce_door_lower",
-        "top": "blocks/spruce_door_upper"
+        "bottom": "blocks/spruce_door_bottom",
+        "top": "blocks/spruce_door_top"
     }
 }
