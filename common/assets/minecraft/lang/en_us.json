@@ -52,7 +52,10 @@
 	"item.minecraft.beef": "Raw Meat",
 	"item.minecraft.cooked_beef": "Cooked Meat",
 	"block.minecraft.sugar_cane": "Bamboo",
-	"item.minecraft.rabbit_hide": "Fur Pelt",
+	"item.minecraft.rabbit_hide": "Fur Pelt",	"block.minecraft.carrots": "Corn",
+	"item.minecraft.carrot": "Ear of Corn",
+	"item.minecraft.golden_carrot": "Corn on the Cob",
+	"item.minecraft.carrot_on_a_stick": "Corn on a Stick",
 	"block.minecraft.birch_planks": "Aspen Planks",
 	"block.minecraft.birch_sapling": "Aspen Sapling",
 	"block.minecraft.birch_door": "Aspen Door",

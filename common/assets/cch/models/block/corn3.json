@@ -1,0 +1,7 @@
+{
+    "parent": "cch:block/tall_stalk",
+    "textures": {
+        "bottom": "cch:blocks/corn_3_bottom",
+        "top": "cch:blocks/corn_3_top"
+    }
+}

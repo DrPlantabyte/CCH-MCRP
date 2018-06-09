@@ -1,0 +1,6 @@
+{
+    "parent": "cch:block/short_stalk",
+    "textures": {
+        "bottom": "cch:blocks/corn_2_bottom"
+    }
+}
