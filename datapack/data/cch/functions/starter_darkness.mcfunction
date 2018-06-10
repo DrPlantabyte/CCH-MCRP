@@ -55,9 +55,9 @@ data merge block ~1 ~-4 ~1 {Command:"fill ~ ~ ~ ~ ~3 ~ minecraft:bedrock replace
 gamerule doWeatherCycle falseweather thunder 1000000
 fill ~2 ~ ~2 ~4 ~2 ~4 minecraft:bedrock replace
 setblock ~3 ~1 ~2 minecraft:barrier replace
-setblock ~3 ~1 ~3 minecraft:prismarine_bricks replace
+setblock ~3 ~1 ~3 minecraft:magma_block replace
 setblock ~3 ~-1 ~1 minecraft:repeating_command_block[facing=down,conditional=false] replace
-data merge block ~3 ~-1 ~1 {Command:"execute if block ~ ~1 ~ minecraft:prismarine_bricks run weather clear", auto:1}
+data merge block ~3 ~-1 ~1 {Command:"execute if block ~ ~1 ~ minecraft:magma_block run weather clear", auto:1}
 setblock ~3 ~-2 ~1 minecraft:chain_command_block[facing=down,conditional=true] replace
 data merge block ~3 ~-2 ~1 {Command:"gamerule doWeatherCycle true", auto:1}
 setblock ~3 ~-3 ~1 minecraft:chain_command_block[facing=down,conditional=true] replace
@@ -71,6 +71,4 @@ setblock ~5 ~-2 ~1 minecraft:chain_command_block[facing=down,conditional=true] r
 data merge block ~5 ~-2 ~1 {Command:"fill ~ ~ ~ ~ ~1 ~ minecraft:bedrock replace", auto:1}
 fill ~6 ~ ~2 ~8 ~2 ~4 minecraft:bedrock replace
 setblock ~7 ~1 ~2 minecraft:barrier replace
-setblock ~7 ~1 ~3 minecraft:purpur_block replace
-setblock ~7 ~-1 ~1 minecraft:repeating_command_block[facing=down,conditional=false] replace
-data merge block ~7 ~-1 ~1 {Command:"execute if block ~ ~1 ~ minecraft:purpur_block run effect give @a minecraft:health_boost 6000 4 true", auto:1}
+setblock ~7 ~1 ~3 minecraft:purpur_block replacesetblock ~7 ~-1 ~1 minecraft:repeating_command_block[facing=down,conditional=false] replacedata merge block ~7 ~-1 ~1 {Command:"execute if block ~ ~1 ~ minecraft:purpur_block run fill ~ ~ ~ ~ ~ ~ minecraft:bedrock replace", auto:1}setblock ~7 ~-2 ~1 minecraft:repeating_command_block[facing=down,conditional=false] replacedata merge block ~7 ~-2 ~1 {Command:"execute if block ~ ~1 ~ minecraft:bedrock run effect give @a minecraft:luck 6000 0 true", auto:1}
