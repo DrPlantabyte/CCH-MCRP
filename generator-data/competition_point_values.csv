@@ -1,0 +1,39 @@
+Type,Variable,Name,Points,Category
+dummy,temp,X,0,admin
+dummy,ptval,Y,0,admin
+dummy,score,Score,0,admin
+health,health,Health,0,life
+deathCount,deaths,Deaths,-25,life
+level,lvl,XP level,10,stats
+minecraft.custom:minecraft.fish_caught ,fishes,Catch fish,5,mining
+minecraft.mined:minecraft.coal_ore,cmined,Mine coal,4,mining
+minecraft.mined:minecraft.nether_quartz_ore,qmined,Mine quartz,10,mining
+minecraft.mined:minecraft.lapis_ore,lmined,Mine lapis,15,mining
+minecraft.mined:minecraft.emerald_ore,emined,Mine emerald,20,mining
+minecraft.mined:minecraft.diamond_ore,dmined,Mine diamond,25,mining
+minecraft.custom:minecraft.mob_kills,mkills,Kill mob,1,kills
+minecraft.killed:minecraft.ghast,ghkills,Kill ghast,10,kills
+minecraft.killed:minecraft.phantom,phkills,Kill phantom,10,kills
+minecraft.killed:minecraft.evocation_illager,eikills,Kill evoker,15,kills
+minecraft.killed:minecraft.illusion_illager,iikills,Kill illusioner,15,kills
+playerKillCount,pkills,Kill player,50,kills
+minecraft.killed:minecraft.elder_guardian,egkills,Kill e. guardian,100,kills
+minecraft.killed:minecraft.wither,witherkills,Kill wither,400,kills
+minecraft.killed:minecraft.ender_dragon,dragonkills,Kill dragon,500,kills
+minecraft.crafted:minecraft.powered_rail,rails,Make gold rails,1,crafting
+minecraft.crafted:minecraft.bread,bread,Make bread,2,crafting
+minecraft.crafted:minecraft.cookie,cookies,Make cookie,3,crafting
+minecraft.crafted:minecraft.painting,paintings,Make painting,3,crafting
+minecraft.crafted:minecraft.redstone_lamp,lamps,Make lamp,5,crafting
+minecraft.crafted:minecraft.cake,cakes,Make cake,10,crafting
+minecraft.crafted:minecraft.firework_star,fwstars,Make f.w. star,10,crafting
+minecraft.crafted:minecraft.firework_rocket,fwrockets,Make firework,10,crafting
+minecraft.crafted:minecraft.pumpkin_pie,pies,Make pie,10,crafting
+minecraft.crafted:minecraft.rabbit_stew,stews,Make r. stew,10,crafting
+minecraft.crafted:minecraft.tnt,tnt,Make explosives,20,crafting
+minecraft.custom:minecraft.enchant_item,enchants,Enchant item,25,crafting
+minecraft.crafted:minecraft.anvil,anvils,Make anvil,25,crafting
+minecraft.crafted:minecraft.ender_chest,enderchests,Make end chest,50,crafting
+minecraft.crafted:minecraft.end_crystal,crystals,Make end crystal,50,crafting
+minecraft.crafted:minecraft.beacon,beacons,Make beacon,100,crafting
+minecraft.crafted:minecraft.conduit,conduits,Make conduit,100,crafting
