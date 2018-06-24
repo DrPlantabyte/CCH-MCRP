@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "cch:items/corn_cob"
+        "layer0": "cch:item/corn_cob"
     }
 }

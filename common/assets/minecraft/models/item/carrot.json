@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "cch:items/corn_ear"
+        "layer0": "cch:item/corn_ear"
     }
 }

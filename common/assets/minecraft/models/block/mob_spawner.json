@@ -1,9 +1,9 @@
 {
     "parent": "block/block",
 	"textures":{
-		"particle": "blocks/obsidian",
-		"frame": "blocks/obsidian",
-		"portal": "blocks/portal"
+		"particle": "block/obsidian",
+		"frame": "block/obsidian",
+		"portal": "block/portal"
 	},
     "elements": [
         {   "from": [ 2, 0, 2 ],

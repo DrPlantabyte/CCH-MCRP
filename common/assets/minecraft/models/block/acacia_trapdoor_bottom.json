@@ -1,7 +1,7 @@
 {
     "parent": "cch:block/trapdoor_bottom",
     "textures": {
-        "texture": "blocks/acacia_planks",
-        "blind":  "cch:materials/wooden_blind"
+        "texture": "block/acacia_planks",
+        "blind":  "cch:material/wooden_blind"
     }
 }
