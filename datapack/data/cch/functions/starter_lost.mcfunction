@@ -1,4 +1,4 @@
-setworldspawn ~-3 ~ ~-3spawnpoint @a ~ ~ ~scoreboard objectives add days dummy Days Survived
+setworldspawn ~-3 ~ ~-3spawnpoint @a ~ ~ ~scoreboard objectives add days dummy "Days Survived"
 scoreboard objectives setdisplay list daysgamerule commandBlockOutput falsefill ~-16 ~-9 ~-16 ~16 ~11 ~16 minecraft:barrier hollow
 fill ~-15 ~-9 ~-15 ~15 ~-1 ~15 minecraft:bedrock hollow
 fill ~-14 ~-2 ~-14 ~14 ~-2 ~14 minecraft:glowstone replacefill ~-1 ~-7 ~-1 ~1 ~-1 ~1 minecraft:barrier hollow

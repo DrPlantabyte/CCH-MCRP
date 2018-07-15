@@ -35,25 +35,25 @@ setblock 7 66 7 minecraft:beacon replace
 setblock 16 7 -2 minecraft:wall_torch[facing=west] replace
 
 
-team add north Gray Frost
-team option north color gray
-team option north nametagVisibility hideForOtherTeams 
-team option north seeFriendlyInvisibles true
+team add north "Gray Frost"
+team modify north color gray 
+team modify north nametagVisibility hideForOtherTeams 
+team modify north seeFriendlyInvisibles true
 
-team add south Crimson Skull
-team option south color dark_red
-team option south nametagVisibility hideForOtherTeams 
-team option south seeFriendlyInvisibles true
+team add south "Crimson Skull"
+team modify south color dark_red
+team modify south nametagVisibility hideForOtherTeams 
+team modify south seeFriendlyInvisibles true
 
-team add west Sapphire Star
-team option west color blue
-team option west nametagVisibility hideForOtherTeams 
-team option west seeFriendlyInvisibles true
+team add west "Sapphire Star"
+team modify west color blue
+team modify west nametagVisibility hideForOtherTeams 
+team modify west seeFriendlyInvisibles true
 
-team add east Golden Sun
-team option east color yellow
-team option east nametagVisibility hideForOtherTeams 
-team option east seeFriendlyInvisibles true
+team add east "Golden Sun"
+team modify east color yellow
+team modify east nametagVisibility hideForOtherTeams 
+team modify east seeFriendlyInvisibles true
 
 
 function cch:z__competition_scoreboard_init

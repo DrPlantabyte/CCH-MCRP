@@ -14,8 +14,8 @@ minecraft.mined:minecraft.diamond_ore,dmined,Mine diamond,25,mining
 minecraft.custom:minecraft.mob_kills,mkills,Kill mob,1,kills
 minecraft.killed:minecraft.ghast,ghkills,Kill ghast,10,kills
 minecraft.killed:minecraft.phantom,phkills,Kill phantom,10,kills
-minecraft.killed:minecraft.evocation_illager,eikills,Kill evoker,15,kills
-minecraft.killed:minecraft.illusion_illager,iikills,Kill illusioner,15,kills
+minecraft.killed:minecraft.evoker,eikills,Kill evoker,15,kills
+minecraft.killed:minecraft.illusioner,iikills,Kill illusioner,15,kills
 playerKillCount,pkills,Kill player,50,kills
 minecraft.killed:minecraft.elder_guardian,egkills,Kill e. guardian,100,kills
 minecraft.killed:minecraft.wither,witherkills,Kill wither,400,kills

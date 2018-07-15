@@ -8,7 +8,7 @@ root_dir = os.path.dirname(this_dir)func_dir = os.path.join(root_dir, 'datapack
 			entry['pts'] =data['Points'][n]
 			entry['cat'] =data['Category'][n]			points = entry['pts']
 			#print('{var}({type}) = {pts}\t{name} ({cat})'.format(**entry))
-			init_command = 'scoreboard objectives add {var} {type} {name}\n'.format(**entry)			if(int(points) != 0 and entry['cat'] != 'stats'):				init_command += 'scoreboard players set @a {var} 0\n'.format(**entry)			update_command = str('scoreboard players set @s temp 0\n'+
+			init_command = 'scoreboard objectives add {var} {type} "{name}"\n'.format(**entry)			if(int(points) != 0 and entry['cat'] != 'stats'):				init_command += 'scoreboard players set @a {var} 0\n'.format(**entry)			update_command = str('scoreboard players set @s temp 0\n'+
 					'scoreboard players set @s ptval {pts}\n'+
 					'scoreboard players operation @s temp += @s {var}\n'+
 					'scoreboard players operation @s temp *= @s ptval\n'+
