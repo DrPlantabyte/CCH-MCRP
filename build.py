@@ -8,7 +8,7 @@ import zipfile
 
 this_dir = os.path.dirname(os.path.realpath(__file__))
 common_dir = os.path.join(this_dir, "common")
-texture_dirs = ["x16"]
+texture_dirs = ["x16"]datapacks = ["CCH_datapack", "mediumcore"]
 datapack_dir = os.path.join(this_dir, "datapack")
 dist_dir = os.path.join(this_dir, "distributables")build_dir = os.path.join(this_dir, "temp")
 
@@ -27,8 +27,8 @@ def main():	# setup dirs
 		copy_tree(src_dir, tmp_build_dir)		# distribute as .zip file
 		zip_file = os.path.join(dist_dir, "CCH_resourcepack_" + str(tex_src) + ".zip")
 		zipDir(tmp_build_dir, zip_file)	# distribute the datapack
-	print(str.format("\n\tBuilding datapack..."))
-	zipDir(datapack_dir, os.path.join(dist_dir, "CCH_datapack.zip"))	# clean-up	shutil.rmtree(build_dir)
+	print(str.format("\n\tBuilding datapacks..."))	for dp_name in datapacks:		src_dir = os.path.join(datapack_dir, dp_name)
+		zipDir(src_dir, os.path.join(dist_dir, str(dp_name)+".zip"))	# clean-up	shutil.rmtree(build_dir)
 
 def zipDir(src_dir, dest_filepath):	print(str.format("Zipping '{}' to '{}'", src_dir, dest_filepath))
 	the_files = listFiles(src_dir)

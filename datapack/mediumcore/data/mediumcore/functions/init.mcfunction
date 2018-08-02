@@ -1,0 +1,1 @@
+scoreboard objectives add deaths deathCount "Deaths"scoreboard objectives add spawns dummy "Re-Spawns"scoreboard objectives add timeofday dummy "Time of Day"scoreboard objectives add dayslived dummy "Days Survived"scoreboard objectives add hiscore dummy "High Score"

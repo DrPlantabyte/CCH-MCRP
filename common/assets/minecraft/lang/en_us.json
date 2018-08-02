@@ -1,5 +1,5 @@
 {
-	"block.minecraft.end_rod": "Glow Rod",
+	"block.minecraft.end_rod": "Glow Stick",
 	"block.minecraft.torch": "Everburning Torch",
 	"block.minecraft.wall_torch": "Everburning Wall Torch",
 	"block.minecraft.petrified_oak_slab": "Petrified Wood Slab",
@@ -51,6 +51,8 @@
 	"item.minecraft.cooked_chicken": "Cooked Bird",
 	"item.minecraft.beef": "Raw Meat",
 	"item.minecraft.cooked_beef": "Cooked Meat",
+	"item.minecraft.mutton": "Raw Squid",
+	"item.minecraft.cooked_mutton": "Cooked Squid",
 	"block.minecraft.sugar_cane": "Bamboo",
 	"item.minecraft.rabbit_hide": "Fur Pelt",	"block.minecraft.carrots": "Corn",
 	"item.minecraft.carrot": "Ear of Corn",
@@ -160,7 +162,7 @@
 	"biome.minecraft.mutated_birch_forest_hills": "Mutated Aspen Forest Hills",
 	"biome.minecraft.mutated_redwood_taiga": "Mutated Mega Taiga",
 	"biome.minecraft.mutated_redwood_taiga_hills": "Mutated Taiga Hills",
-
+
 	"item.minecraft.wolf_spawn_egg": "Spawn Wild Dog",
 	"entity.minecraft.wolf": "Wild Dog",
 	"subtitles.entity.wolf.ambient": "Wild dog pants",
