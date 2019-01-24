@@ -1,0 +1,100 @@
+{
+	"block.minecraft.end_rod": "Glow Rod",
+
+	"item.minecraft.ink_sac": "Ink",
+
+	"block.minecraft.iron_ore": "Iron Ore",
+	"block.minecraft.iron_block": "Block of Steel",
+	"item.minecraft.iron_horse_armor": "Steel Horse Armor",
+	"item.minecraft.iron_nugget": "Steel Nugget",
+	"item.minecraft.iron_ingot": "Steel Ingot",
+	
+	"block.minecraft.obsidian": "Basalt",
+	
+	"block.minecraft.tnt": "Explosives",
+	"item.minecraft.tnt_minecart": "Minecart with Explosives",
+	"entity.minecraft.tnt": "Primed Explosives",
+	"entity.minecraft.tnt_minecart": "Minecart with Explosives",
+	"subtitles.entity.tnt.primed": "Explosives fizzes",
+	
+	"block.minecraft.iron_door": "Steel Door",
+	"block.minecraft.iron_trapdoor": "Steel Trapdoor",
+	"block.minecraft.iron_bars": "Steel Bars",
+	
+	"item.minecraft.iron_shovel": "Shovel",
+	"item.minecraft.iron_pickaxe": "Pickaxe",
+	"item.minecraft.iron_axe": "Axe",
+	"item.minecraft.iron_sword": "Sword",
+	"item.minecraft.iron_hoe": "Steel Hoe",
+	
+	"item.minecraft.wooden_sword": "Club",
+	"item.minecraft.wooden_shovel": "Wooden Shovel",
+	"item.minecraft.wooden_pickaxe": "Wooden Pickaxe",
+	"item.minecraft.wooden_axe": "Wooden Axe",
+	"item.minecraft.wooden_hoe": "Wooden Hoe",
+	
+	"item.minecraft.stone_sword": "Mace",
+	"item.minecraft.stone_shovel": "Stone Shovel",
+	"item.minecraft.stone_pickaxe": "Stone Pickaxe",
+	"item.minecraft.stone_axe": "Stone Axe",
+	"item.minecraft.stone_hoe": "Stone Hoe",
+	
+	"item.minecraft.diamond_sword": "Diamond Sword",
+	"item.minecraft.diamond_shovel": "Diamond Shovel",
+	"item.minecraft.diamond_pickaxe": "Diamond Pickaxe",
+	"item.minecraft.diamond_axe": "Diamond Axe",
+	"item.minecraft.diamond_hoe": "Diamond Hoe",
+	
+	"item.minecraft.golden_sword": "Golden Sword",
+	"item.minecraft.golden_shovel": "Golden Shovel",
+	"item.minecraft.golden_pickaxe": "Golden Pickaxe",
+	"item.minecraft.golden_axe": "Golden Axe",
+	"item.minecraft.golden_hoe": "Golden Hoe",
+	
+	"item.minecraft.leather_helmet": "Leather Cap",
+	"item.minecraft.leather_chestplate": "Leather Tunic",
+	"item.minecraft.leather_leggings": "Leather Pants",
+	"item.minecraft.leather_boots": "Leather Boots",
+	
+	"item.minecraft.chainmail_helmet": "Chainmail Helmet",
+	"item.minecraft.chainmail_chestplate": "Chainmail Chestplate",
+	"item.minecraft.chainmail_leggings": "Chainmail Leggings",
+	"item.minecraft.chainmail_boots": "Chainmail Boots",
+	
+	"item.minecraft.iron_helmet": "Steel Helmet",
+	"item.minecraft.iron_chestplate": "Steel Chestplate",
+	"item.minecraft.iron_leggings": "Steel Leggings",
+	"item.minecraft.iron_boots": "Steel Boots",
+	
+	"item.minecraft.diamond_helmet": "Diamond Helmet",
+	"item.minecraft.diamond_chestplate": "Diamond Chestplate",
+	"item.minecraft.diamond_leggings": "Diamond Leggings",
+	"item.minecraft.diamond_boots": "Diamond Boots",
+	
+	"item.minecraft.golden_helmet": "Golden Helmet",
+	"item.minecraft.golden_chestplate": "Golden Chestplate",
+	"item.minecraft.golden_leggings": "Golden Leggings",
+	"item.minecraft.golden_boots": "Golden Boots",
+	
+	"item.minecraft.spider_eye": "Spider Eye",
+	"item.minecraft.fermented_spider_eye": "Fermented Spider Eye",
+	"item.minecraft.cave_spider_spawn_egg": "Cave Spider Spawn Egg",
+	"item.minecraft.spider_spawn_egg": "Spider Spawn Egg",
+	"item.minecraft.wolf_spawn_egg": "Wild Dog Spawn Egg",
+	
+	"entity.minecraft.iron_golem": "Steel Golem",
+	"entity.minecraft.wolf": "Wild Dog",
+	
+	"subtitles.entity.wolf.ambient": "Wild dog pants",
+	"subtitles.entity.wolf.death": "Wild dog dies",
+	"subtitles.entity.wolf.growl": "Wild dog growls",
+	"subtitles.entity.wolf.hurt": "Wild dog hurts",
+	"subtitles.entity.wolf.shake": "Wild dog shakes",
+	
+	"subtitles.item.armor.equip_iron": "Steel armor clanks",
+	
+	"advancements.adventure.summon_iron_golem.description": "Summon a Steel Golem to help defend a village",
+	"advancements.story.form_obsidian.description": "Form and mine a block of Basalt",
+	"advancements.story.obtain_armor.description": "Protect yourself with a piece of steel armor",
+	"advancements.story.smelt_iron.description": "Smelt a steel ingot"
+}
