@@ -55,6 +55,7 @@ def change(key, val):
 		text = text.replace('Oak ','').replace('oak ','')
 		text = text.replace('Oak','').replace('oak','')
 	text = text.replace('Beetroot','Beet').replace('beetroot','beet')
+	text = text.replace('Bonemeal','Fertilizer').replace('bonemeal','fertilizer')
 	## other stuff
 	text = text.replace('End Rod','Glow Rod')
 	text = text.replace('Gunpowder','Black Powder')
