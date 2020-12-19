@@ -1,1 +1,0 @@
-setblock ~ ~-1 ~ minecraft:structure_block[mode=load]{metadata:"", mode:"LOAD", posX:-21, posY:-3, posZ:-7, integrity:1.0f, name:"cch:temple_of_minecraft"}setblock ~ ~-2 ~ minecraft:redstone_block setworldspawn ~ ~ ~spawnpoint @a ~ ~ ~

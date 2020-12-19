@@ -1,9 +1,0 @@
-{
-  "type": "smelting",
-  "ingredient": {
-    "item": "minecraft:charcoal"
-  },
-  "result": "minecraft:ink_sac",
-  "experience": 0.15,
-  "cookingtime": 200
-}
