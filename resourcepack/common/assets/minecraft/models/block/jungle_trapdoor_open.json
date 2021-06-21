@@ -1,7 +1,6 @@
 {
     "parent": "cch:block/trapdoor_open",
     "textures": {
-        "texture": "block/jungle_planks",
-        "blind":  "cch:material/wooden_blind"
+        "texture": "block/jungle_planks"
     }
 }

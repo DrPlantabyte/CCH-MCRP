@@ -34,6 +34,7 @@ def change(key, val):
 	## steel
 	if re.search('raw|ore|advancements',key) == None:
 		text = text.replace('Iron ','Steel ').replace('iron ','steel ')
+		text = text.replace(' Iron',' Steel').replace(' iron',' steel')
 	## weapons and armor
 	if re.search('sword',key) != None:
 		text = text.replace('Wooden Sword','Club').replace('Stone Sword','Mace')
