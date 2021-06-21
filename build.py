@@ -11,7 +11,7 @@ import zipfile
 
 this_dir = path.dirname(path.abspath(__file__))
 
-MC_VERSION = 'MC16'
+MC_VERSION = 'MC17'
 
 texture_dirs = ["x16", "x32", "x64", "x128", "x256"]
 resourcepack_dir = path.join(this_dir, "resourcepack")

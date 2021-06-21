@@ -7,7 +7,7 @@ os.chdir(THIS_DIR)
 print(path.abspath('.'))
 
 def main():
-	with open('MC-Ref/MC16/assets/minecraft/lang/en_us.json', 'r') as file_in, open('resourcepack/common/assets/minecraft/lang/en_us.json','w') as file_out:
+	with open('../MC-1.17.0/assets/minecraft/lang/en_us.json', 'r') as file_in, open('resourcepack/common/assets/minecraft/lang/en_us.json','w') as file_out:
 		src_data = json.load(file_in)
 		out_data = {}
 		for key in src_data:
@@ -32,8 +32,9 @@ def change(key, val):
 	# example : if re.search('apple|oak',key) == None: return None
 	text = val
 	## steel
-	if re.search('ore|advancements',key) == None:
+	if re.search('raw|ore|advancements',key) == None:
 		text = text.replace('Iron ','Steel ').replace('iron ','steel ')
+		text = text.replace(' Iron',' Steel').replace(' iron',' steel')
 	## weapons and armor
 	if re.search('sword',key) != None:
 		text = text.replace('Wooden Sword','Club').replace('Stone Sword','Mace')
@@ -45,7 +46,6 @@ def change(key, val):
 	else:
 		text = text.replace('Wolf','Dog')
 	## plants
-	text = text.replace('Spruce','Pine').replace('spruce','pine')
 	text = text.replace('Dark Oak','Darkwood')
 	text = text.replace('Petrified Oak','Petrified Wood')
 	if re.search('door|slab|plate|sign|button|stair|planks',key) != None:
