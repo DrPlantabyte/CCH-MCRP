@@ -48,8 +48,9 @@ def main():
 		zip_file = path.join(dist_dir, "CCH_MCRP_%s_%s.zip" % (MC_VERSION, tex_src))
 		zipDir(tmp_build_dir, zip_file)
 	## distribute the datapack
-	print(str.format("\n\tBuilding datapack..."))
-	zipDir(datapack_dir, path.join(dist_dir, "CCH_datapack_%s.zip" % (MC_VERSION, )))
+	print(str.format("\n\tBuilding datapacks..."))
+	for dpack in os.listdir(datapack_dir):
+		zipDir(path.join(datapack_dir, dpack), path.join(dist_dir, "CCH_datapack_%s_%s.zip" % (dpack, MC_VERSION)))
 	
 	# clean-up
 	shutil.rmtree(build_dir)
