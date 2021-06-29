@@ -21,6 +21,9 @@ build_dir = path.join(this_dir, "temp")
 
 
 def main():
+	# from build scripts
+	import lang_convert
+	lang_convert.main()
 	# setup dirs
 	if not(path.exists(dist_dir)):
 		os.makedirs(dist_dir)

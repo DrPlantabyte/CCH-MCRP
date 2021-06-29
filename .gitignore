@@ -6,4 +6,4 @@
 # so you must dance for Linus Torvalds! Dance! Dance he says!
 distributables/**
 temp/**
-MC-Ref/**
+__pycache__/**
