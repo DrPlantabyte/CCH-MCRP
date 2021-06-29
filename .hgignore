@@ -1,3 +1,4 @@
 syntax: glob
 */distributables/**
 */temp/**
+__pycache__/**
