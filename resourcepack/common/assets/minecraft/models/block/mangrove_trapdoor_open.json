@@ -1,0 +1,6 @@
+{
+  "parent": "cch:block/trapdoor_open",
+  "textures": {
+    "texture": "minecraft:block/mangrove_planks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "cch:item/door_item",
+	"textures": {
+		"bottom": "minecraft:block/mangrove_door_bottom",
+		"top": "minecraft:block/mangrove_door_top"
+	}
+}
