@@ -7,8 +7,9 @@ os.chdir(THIS_DIR)
 print(path.abspath('.'))
 
 def main():
-	with open('../MC-19/assets/minecraft/lang/en_us.json', 'r') as file_in, open('resourcepack/common/assets/minecraft/lang/en_us.json','w') as file_out:
-		src_data = json.load(file_in)
+	with open('../MC-1.20.1/assets/minecraft/lang/en_us.json', 'rb') as file_in, open('resourcepack/common/assets/minecraft/lang/en_us.json','w') as file_out:
+		json_str = file_in.read().decode('utf8', errors='replace')
+		src_data = json.loads(json_str)
 		out_data = {}
 		for key in src_data:
 			src_val = src_data[key]
