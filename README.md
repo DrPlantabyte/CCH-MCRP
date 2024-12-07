@@ -19,7 +19,7 @@ This is my on-going Minecraft resource pack. My aim is to improve the consistenc
 ![screnshot2](https://user-images.githubusercontent.com/1922739/100929518-e10cff00-353b-11eb-8bfb-e2bfb31869ea.png)
 
 ## Minecraft Versions Supported
-Minecraft 1.10 - 1.16
+Minecraft 1.10 - 1.21
 
 ## Permissions & Redistribution
 Anyone is free to use this resource pack in their own Minecraft game.
