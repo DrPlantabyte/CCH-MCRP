@@ -1,0 +1,7 @@
+{
+    "parent": "cch:item/door_item",
+    "textures": {
+        "bottom": "minecraft:block/exposed_copper_door_bottom",
+        "top": "minecraft:block/exposed_copper_door_top"
+    }
+}

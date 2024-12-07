@@ -7,8 +7,9 @@ os.chdir(THIS_DIR)
 print(path.abspath('.'))
 
 def main():
-	with open('../MC-19/assets/minecraft/lang/en_us.json', 'r') as file_in, open('resourcepack/common/assets/minecraft/lang/en_us.json','w') as file_out:
-		src_data = json.load(file_in)
+	with open('../MC-1.21.4/assets/minecraft/lang/en_us.json', 'rb') as file_in, open('resourcepack/common/assets/minecraft/lang/en_us.json','w') as file_out:
+		json_str = file_in.read().decode('utf8', errors='replace')
+		src_data = json.loads(json_str)
 		out_data = {}
 		for key in src_data:
 			src_val = src_data[key]
@@ -32,26 +33,23 @@ def change(key, val):
 	# example : if re.search('apple|oak',key) == None: return None
 	text = val
 	## steel
-	if re.search('raw|ore|advancements',key) == None:
+	if re.search('raw|ore|advancements',key) == None and "golem" not in text.lower():
 		text = text.replace('Iron ','Steel ').replace('iron ','steel ')
 		text = text.replace(' Iron',' Steel').replace(' iron',' steel')
 	## weapons and armor
 	if re.search('sword',key) != None:
-		text = text.replace('Wooden Sword','Club').replace('Stone Sword','Mace')
+		text = text.replace('Wooden Sword','Club')
 	if re.search('helmet|chestplate|leggings|boots',key) != None:
 		text = text.replace('Chainmail Chestplate','Chainmail Shirt').replace('Chainmail Hemlet','Chainmail Hood')
 	## animals
-	if re.search('subtitles',key) == None:
-		text = text.replace('Wolf','Wild Dog')
-	else:
-		text = text.replace('Wolf','Dog')
+	# none
 	## plants
 	text = text.replace('Dark Oak','Darkwood')
 	text = text.replace('Petrified Oak','Petrified Wood')
 	if re.search('door|slab|plate|sign|button|stair|planks',key) != None:
 		text = text.replace('Oak ','Wooden ').replace('oak ','wooden ')
 		text = text.replace('Oak','Wooden').replace('oak','wooden')
-	else:
+	elif "croak" not in text.lower():
 		text = text.replace('Oak ','').replace('oak ','')
 		text = text.replace('Oak','').replace('oak','')
 	text = text.replace('Beetroot','Beet').replace('beetroot','beet')
