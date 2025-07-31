@@ -1,0 +1,6 @@
+{
+    "parent": "cch:block/trapdoor_top",
+    "textures": {
+        "texture": "minecraft:block/cherry_planks"
+    }
+}

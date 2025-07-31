@@ -1,6 +1,6 @@
 {
     "parent": "cch:block/trapdoor_open",
     "textures": {
-        "texture": "block/birch_planks"
+        "texture": "minecraft:block/birch_planks"
     }
 }

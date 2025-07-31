@@ -1,6 +1,6 @@
 {
     "parent": "cch:block/trapdoor_top",
     "textures": {
-        "texture": "block/dark_oak_planks"
+        "texture": "minecraft:block/dark_oak_planks"
     }
 }

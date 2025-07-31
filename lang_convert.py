@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-import json, os, re, collections, operator
+import json, os, re, collections, sys
 from os import path
 
 THIS_DIR = path.dirname(path.abspath(__file__))
 os.chdir(THIS_DIR)
 print(path.abspath('.'))
 
-def main():
-	with open('../MC-1.21.4/assets/minecraft/lang/en_us.json', 'rb') as file_in, open('resourcepack/common/assets/minecraft/lang/en_us.json','w') as file_out:
+def convert_lang(src_lang_file_path, dst_lang_file_path):
+	with open(src_lang_file_path, 'rb') as file_in, open(dst_lang_file_path,'w') as file_out:
 		json_str = file_in.read().decode('utf8', errors='replace')
 		src_data = json.loads(json_str)
 		out_data = {}
@@ -45,6 +45,7 @@ def change(key, val):
 	# none
 	## plants
 	text = text.replace('Dark Oak','Darkwood')
+	text = text.replace('Pale Oak','Palewood')
 	text = text.replace('Petrified Oak','Petrified Wood')
 	if re.search('door|slab|plate|sign|button|stair|planks',key) != None:
 		text = text.replace('Oak ','Wooden ').replace('oak ','wooden ')
@@ -57,10 +58,13 @@ def change(key, val):
 	## other stuff
 	text = text.replace('End Rod','Glow Rod')
 	text = text.replace('Gunpowder','Black Powder')
+	text = text.replace('caused by TNT','caused by bombs')
+	if not key.startswith('item.'):
+		text = text.replace(' TNT',' bomb')
 	text = text.replace('TNT','Bomb')
 	return text
 
 #
 if __name__ == '__main__':
-    main()
+	convert_lang(sys.argv[1])
 #

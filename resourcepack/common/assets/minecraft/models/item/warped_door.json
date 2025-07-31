@@ -1,7 +1,7 @@
 {
     "parent": "cch:item/door_item",
     "textures": {
-        "bottom": "block/warped_door_bottom",
-        "top": "block/warped_door_top"
+        "bottom": "minecraft:block/warped_door_bottom",
+        "top": "minecraft:block/warped_door_top"
     }
 }
