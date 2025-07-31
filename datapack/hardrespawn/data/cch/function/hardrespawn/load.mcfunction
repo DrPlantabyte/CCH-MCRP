@@ -1,3 +1,4 @@
+time set 1000
 scoreboard objectives add days_survived dummy "Days Survived"
 scoreboard players set @a days_survived 0
 scoreboard objectives setdisplay sidebar days_survived
