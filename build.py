@@ -4,14 +4,16 @@ import shutil
 import distutils
 from distutils.dir_util import copy_tree
 import sys
+import jsonyx
 import json
+import io
 import os
 from os import path
 import hashlib
 import zipfile
 import re
 from pathlib import Path
-from typing import Callable
+from typing import Callable, Mapping
 
 this_dir = Path(__file__).absolute().parent
 
@@ -69,8 +71,8 @@ def main():
 				"top": f"minecraft:{top_tex}"
 			}
 		}
-		with dst_path.open('w') as fout:
-			json.dump(model_data, fout, indent='    ')
+		with dst_path.open('w', newline='\n') as fout:
+			json.dump(model_data, fout, indent='\t')
 
 	src_block_models_dir = MC_ASSETS_DIR / 'assets/minecraft/models/block'
 	dst_block_models_dir = resourcepack_dir / 'common/assets/minecraft/models/block'
@@ -100,8 +102,27 @@ def main():
 				"texture": new_tex
 			}
 		}
-		with dst_path.open('w') as fout:
-			json.dump(model_data, fout, indent='    ')
+		with dst_path.open('w', newline='\n') as fout:
+			json.dump(model_data, fout, indent='\t')
+	# stuff related to the extra recipes data pack
+	## make grates tag
+	grate_blocks = []
+	for grate_block_name in [Path(x).stem for x in src_block_models_dir.glob('*_grate.json')]:
+		grate_blocks.append(grate_block_name)
+	grate_tag_data = {"values": [f"minecraft:{x}" for x in grate_blocks]}
+	with (datapacks_dir / 'extra_recipes/data/minecraft/tags/item/grates.json').open("w", newline='\n') as fout:
+		json.dump(grate_tag_data, fout, indent='\t')
+
+	# sanity checks
+	## ensure all JSON files are free of syntax errors
+	print('Checking JSON files for syntax errors...')
+	check_passed = True
+	for json_file in list(this_dir.rglob('**/*.json')) + list(this_dir.rglob('**/*.mcmeta')):
+		check_passed = check_passed and format_json_file(json_file)
+	if not check_passed:
+		print('...FAIL')
+		exit(1)
+	print('...PASS')
 
 	# setup dirs
 	if not(path.exists(dist_dir)):
@@ -164,6 +185,23 @@ def update_json_file(filepath: str|Path, update_fn: Callable[[dict],None]):
 	update_fn(data)
 	with Path(filepath).open("w") as fout:
 		json.dump(data, fout, indent='\t')
+
+def format_json_file(json_file: str|Path) -> bool:
+	json_file = Path(json_file)
+	try:
+		with json_file.open("r") as fin:
+			json_data = json.load(fin)
+		# if json_data is nested, use jsonyx to inline leaf-nodes, otherwise use standard json
+		if any([isinstance(x, Mapping) for x in json_data.values()]) and json_file.suffix != '.mcmeta':
+			with json_file.open("w", newline='\n') as fout:
+				jsonyx.dump(json_data, fout, indent='\t', indent_leaves=False)
+		else:
+			with json_file.open("w", newline='\n') as fout:
+				json.dump(json_data, fout, indent='\t')
+	except Exception as ex:
+		print(f'Error parsing JSON file {str(json_file)}: {ex}')
+		return False
+	return True
 
 def cleanDir(dir_path):
 	for f in os.listdir(dir_path):

@@ -1,6 +1,4 @@
 {
-    "parent": "cch:block/trapdoor_top",
-    "textures": {
-        "texture": "minecraft:block/mangrove_planks"
-    }
+	"parent": "cch:block/trapdoor_top",
+	"textures": {"texture": "minecraft:block/mangrove_planks"}
 }

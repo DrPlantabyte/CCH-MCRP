@@ -1,6 +1,4 @@
 {
-    "parent": "cch:block/trapdoor_top",
-    "textures": {
-        "texture": "minecraft:block/acacia_planks"
-    }
+	"parent": "cch:block/trapdoor_top",
+	"textures": {"texture": "minecraft:block/acacia_planks"}
 }

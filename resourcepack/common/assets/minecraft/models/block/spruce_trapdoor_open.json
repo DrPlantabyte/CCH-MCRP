@@ -1,6 +1,4 @@
 {
-    "parent": "cch:block/trapdoor_open",
-    "textures": {
-        "texture": "minecraft:block/spruce_planks"
-    }
+	"parent": "cch:block/trapdoor_open",
+	"textures": {"texture": "minecraft:block/spruce_planks"}
 }

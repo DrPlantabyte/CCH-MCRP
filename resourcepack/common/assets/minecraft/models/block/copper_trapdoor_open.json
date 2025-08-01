@@ -1,6 +1,4 @@
 {
-    "parent": "cch:block/trapdoor_open",
-    "textures": {
-        "texture": "minecraft:block/copper_block"
-    }
+	"parent": "cch:block/trapdoor_open",
+	"textures": {"texture": "minecraft:block/copper_block"}
 }
