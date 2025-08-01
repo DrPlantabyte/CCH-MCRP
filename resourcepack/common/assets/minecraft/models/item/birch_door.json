@@ -1,7 +1,4 @@
 {
-    "parent": "cch:item/door_item",
-    "textures": {
-        "bottom": "block/birch_door_bottom",
-        "top": "block/birch_door_top"
-    }
+	"parent": "cch:item/door_item",
+	"textures": {"bottom": "minecraft:block/birch_door_bottom", "top": "minecraft:block/birch_door_top"}
 }

@@ -1,7 +1,4 @@
 {
-    "parent": "cch:item/door_item",
-    "textures": {
-        "bottom": "minecraft:block/oxidized_copper_door_bottom",
-        "top": "minecraft:block/oxidized_copper_door_top"
-    }
+	"parent": "cch:item/door_item",
+	"textures": {"bottom": "minecraft:block/oxidized_copper_door_bottom", "top": "minecraft:block/oxidized_copper_door_top"}
 }

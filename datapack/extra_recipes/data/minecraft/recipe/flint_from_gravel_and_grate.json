@@ -1,0 +1,6 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "building",
+	"ingredients": ["#minecraft:grates", "minecraft:gravel", "minecraft:gravel", "minecraft:gravel", "minecraft:gravel", "minecraft:gravel", "minecraft:gravel", "minecraft:gravel", "minecraft:gravel"],
+	"result": {"count": 4, "id": "minecraft:flint"}
+}

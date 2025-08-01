@@ -1,7 +1,7 @@
 {
-    "pack": {
-        "pack_format": 15,
-        "description": "Chris Hall\u0027s Minecraft data pack",
-        "_comment": "Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0)"
-    }
+	"pack": {
+		"pack_format": 81,
+		"description": "Whenever you die, you respawn in a new random place in the world",
+		"_comment": "Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0)"
+	}
 }
